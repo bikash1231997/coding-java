@@ -2,7 +2,7 @@ public class Employee {
 
     private Long id;
     private String name;
-    private Long salary;
+    private int salary;
 
     public Long getId() {
         return id;
@@ -12,7 +12,7 @@ public class Employee {
         return name;
     }
 
-    public Long getSalary() {
+    public int getSalary() {
         return salary;
     }
 
@@ -24,7 +24,7 @@ public class Employee {
         this.name = name;
     }
 
-    public void setSalary(Long salary) {
+    public void setSalary(int salary) {
         this.salary = salary;
     }
 }
