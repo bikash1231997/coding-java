@@ -29,5 +29,9 @@ public class FindAvgSalryEmployee {
             total += employee.getSalary(); 
         }
         System.out.println("Average Salary is :" + total/empList.size());
+
+        // Using Stream Api
+        double average = empList.stream().map(Employee::getSalary).mapToInt(Integer::intValue).average().getAsDouble();
+        System.out.println(average);
     }
 }
