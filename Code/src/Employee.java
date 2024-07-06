@@ -72,7 +72,7 @@ public class Employee {
         e5.setSalary(5000);
         e5.setGender("Male");
         
-        return Arrays.asList(e, e1, e2, e3, e4, e5);
+        return Arrays.asList(e1, e2, e3, e4, e5);
     }
 
 }
