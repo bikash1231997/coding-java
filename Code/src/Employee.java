@@ -41,11 +41,6 @@ public class Employee {
     }
 
     public List<Employee> getEmployeeList() {
-        Employee e = new Employee();
-        e.setId(1L);
-        e.setName("Hello");
-        e.setSalary(1000);
-        e.setGender("Male");
 
         Employee e1 = new Employee();
         e1.setId(1L);
@@ -71,7 +66,13 @@ public class Employee {
         e4.setSalary(4000);
         e4.setGender("Female");
 
-        return Arrays.asList(e, e1, e2, e3, e4);
+        Employee e5 = new Employee();
+        e5.setId(5L);
+        e5.setName("Hello5");
+        e5.setSalary(5000);
+        e5.setGender("Male");
+        
+        return Arrays.asList(e, e1, e2, e3, e4, e5);
     }
 
 }
