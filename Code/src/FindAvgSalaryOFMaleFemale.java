@@ -1,4 +1,6 @@
 import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
 
 /**
  * FindAvgSalaryOFMaleFemale
@@ -13,6 +15,10 @@ public class FindAvgSalaryOFMaleFemale {
                 .mapToInt(Integer::intValue).average().getAsDouble();
         System.out.println("Male Avg Salary is : " + maleAvgSalary);
         System.out.println("Female Avg Salary is : " + femaleAvgSalary);
+        // Using groupby function in stream api
+        Map<String, Double> collect = empList.stream()
+                .collect(Collectors.groupingBy(Employee::getGender, Collectors.averagingDouble(Employee::getSalary)));
+        collect.entrySet().forEach(t -> System.out.println(t.getKey() + " "+ t.getValue()));
     }
 
 }
