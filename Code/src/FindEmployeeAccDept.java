@@ -14,5 +14,4 @@ public class FindEmployeeAccDept {
                 .collect(Collectors.groupingBy(Employee::getDepartment, Collectors.counting()));
         collect.entrySet().forEach(t -> System.out.println(t.getKey() + " " + t.getValue()));
     }
-
 }
