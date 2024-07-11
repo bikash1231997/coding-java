@@ -9,6 +9,7 @@ public class Employee {
     private int salary;
     private String gender;
     private LocalDate joinDate;
+    private String department;
 
     public Long getId() {
         return id;
@@ -28,6 +29,10 @@ public class Employee {
 
     public LocalDate getJoinDate() {
         return joinDate;
+    }
+
+    public String getDepartment() {
+        return department;
     }
 
     public void setId(Long id) {
@@ -50,6 +55,10 @@ public class Employee {
         this.joinDate = joinDate;
     }
 
+    public void setDepartment(String department) {
+        this.department = department;
+    }
+
     public List<Employee> getEmployeeList() {
 
         Employee e1 = new Employee();
@@ -58,6 +67,7 @@ public class Employee {
         e1.setSalary(1000);
         e1.setGender("Female");
         e1.setJoinDate(LocalDate.of(2015, 8, 2));
+        e1.setDepartment("IT");
 
         Employee e2 = new Employee();
         e2.setId(2L);
@@ -65,6 +75,7 @@ public class Employee {
         e2.setSalary(2000);
         e2.setGender("Male");
         e2.setJoinDate(LocalDate.of(2016, 8, 2));
+        e2.setDepartment("HR");
 
         Employee e3 = new Employee();
         e3.setId(3L);
@@ -72,6 +83,7 @@ public class Employee {
         e3.setSalary(3000);
         e3.setGender("Female");
         e3.setJoinDate(LocalDate.of(2017, 8, 2));
+        e3.setDepartment("IT");
 
         Employee e4 = new Employee();
         e4.setId(4L);
@@ -79,6 +91,7 @@ public class Employee {
         e4.setSalary(4000);
         e4.setGender("Female");
         e4.setJoinDate(LocalDate.of(2018, 8, 2));
+        e4.setDepartment("HR");
 
         Employee e5 = new Employee();
         e5.setId(5L);
@@ -86,6 +99,7 @@ public class Employee {
         e5.setSalary(5000);
         e5.setGender("Male");
         e5.setJoinDate(LocalDate.of(2019, 8, 2));
+        e5.setDepartment("IT");
 
         return Arrays.asList(e1, e2, e3, e4, e5);
     }
