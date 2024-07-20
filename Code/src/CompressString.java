@@ -18,6 +18,6 @@ public class CompressString {
                 counter = 1;
             }
         }
-        System.out.println(s2);
+        System.out.println(s2); 
     }
 }
