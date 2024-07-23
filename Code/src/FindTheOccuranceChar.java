@@ -1,5 +1,6 @@
 import java.util.LinkedHashMap;
 import java.util.Map;
+import java.util.function.Function;
 import java.util.stream.Collectors;
 
 /**
@@ -22,13 +23,12 @@ public class FindTheOccuranceChar {
 
         map.forEach((t, u) -> System.out.println("key " + t + " value " + u));
 
-                Map<Character, Long> map = s.chars()
-                                    .mapToObj(c -> (char) c)
-                                    .collect(Collectors.groupingBy(
-                                        Function.identity(), 
-                                        LinkedHashMap::new, 
-                                        Collectors.counting()
-                                    ));
+        Map<Character, Long> mapsMap = s.chars()
+                .mapToObj(c -> (char) c)
+                .collect(Collectors.groupingBy(
+                        Function.identity(),
+                        LinkedHashMap::new,
+                        Collectors.counting()));
         // Code for remove Duplicate Chars from string
         String b = map.keySet().stream().map(String::valueOf).collect(Collectors.joining());
         System.out.println(b);
