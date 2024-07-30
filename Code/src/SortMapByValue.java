@@ -32,3 +32,20 @@ public class SortMapByValue {
                   ));
     }
 }
+
+/*
+Convert Map Entries to Stream:
+
+map.entrySet().stream() creates a stream of the map's entries.
+Sort Entries:
+
+sorted(Map.Entry.comparingByValue()) sorts the stream based on the map's values. Map.Entry.comparingByValue() provides a comparator that compares map entries by their values.
+Collect Sorted Entries into a LinkedHashMap:
+
+Collectors.toMap(...) collects the sorted entries into a new map.
+Map.Entry::getKey extracts the keys.
+Map.Entry::getValue extracts the values.
+(e1, e2) -> e1 resolves conflicts, but there should be no conflicts in this case.
+LinkedHashMap::new creates a LinkedHashMap to maintain the insertion order of the sorted entries.
+
+    */
