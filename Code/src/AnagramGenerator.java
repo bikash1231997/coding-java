@@ -14,7 +14,12 @@ public class AnagramGenerator {
         return result;
     }
 
- /*    private static void permute(String str, String prefix, List<String> result) {
+ /*       public static List<String> generateAnagrams(String str) {
+        List<String> result = new ArrayList<>();
+        permute(str, "", result);
+        return result.stream().distinct().collect(Collectors.toList());
+    }
+    private static void permute(String str, String prefix, List<String> result) {
         int n = str.length();
         if (n == 0) {
             result.add(prefix);
