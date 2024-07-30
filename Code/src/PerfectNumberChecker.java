@@ -18,6 +18,22 @@ public class PerfectNumberChecker {
             }
         }
 
+         // Use IntStream to calculate the sum of proper divisors
+        int sum = IntStream.rangeClosed(1, num / 2)
+                           .filter(i -> num % i == 0)
+                           .sum();
+        /*
+        Use IntStream.rangeClosed:
+
+Create a stream of integers from 1 to num / 2, inclusive. This represents the range of potential proper divisors.
+Sum the Divisors:
+
+Use .sum() to calculate the total sum of the filtered divisors.
+Check Perfection:
+
+Compare the sum of divisors to the original number to determine if it is perfect.
+        */
+
         // A number is perfect if the sum of its proper divisors is equal to the number itself
         return sum == num;
     }
