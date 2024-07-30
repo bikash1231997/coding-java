@@ -1,3 +1,18 @@
+// O(n2)
+/*
+Sorting: The array is sorted to efficiently find triplets using the two-pointer technique. Sorting takes 𝑂(𝑛log𝑛) O(nlogn) time.
+Outer Loop: Iterate through each element. Skip duplicates to avoid processing the same value multiple times for the first element.
+Two Pointers:
+Initialize left to the position right after the current element.
+Initialize right to the end of the array.
+Adjust left and right based on the sum compared to the target.
+Skip Duplicates:
+After finding a valid triplet, skip over any duplicate values to ensure that only unique triplets are added.
+Time Complexity: The algorithm runs in 
+𝑂(𝑛2)O(n2) time because sorting takes 𝑂
+(𝑛log𝑛)O(nlogn) and the two-pointer technique runs in 𝑂(𝑛) O(n) for each element.
+    */
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
