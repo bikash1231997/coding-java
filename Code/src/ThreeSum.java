@@ -2,17 +2,18 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class ThreeSum {
+public class ThreeSumWithTarget {
     public static void main(String[] args) {
-        int[] nums = {-1, 0, 1, 2, -1, -4};
-        List<List<Integer>> result = threeSum(nums);
-        System.out.println("Triplets that sum to zero:");
+        int[] nums = {1, 2, -1, -1, -4, 2};
+        int target = 2;
+        List<List<Integer>> result = threeSumWithTarget(nums, target);
+        System.out.println("Triplets that sum to " + target + ":");
         for (List<Integer> triplet : result) {
             System.out.println(triplet);
         }
     }
 
-    public static List<List<Integer>> threeSum(int[] nums) {
+    public static List<List<Integer>> threeSumWithTarget(int[] nums, int target) {
         List<List<Integer>> result = new ArrayList<>();
         if (nums == null || nums.length < 3) {
             return result;
@@ -34,7 +35,7 @@ public class ThreeSum {
             while (left < right) {
                 int sum = nums[i] + nums[left] + nums[right];
                 
-                if (sum == 0) {
+                if (sum == target) {
                     result.add(Arrays.asList(nums[i], nums[left], nums[right]));
                     // Skip duplicate values
                     while (left < right && nums[left] == nums[left + 1]) {
@@ -45,7 +46,7 @@ public class ThreeSum {
                     }
                     left++;
                     right--;
-                } else if (sum < 0) {
+                } else if (sum < target) {
                     left++;
                 } else {
                     right--;
@@ -56,4 +57,3 @@ public class ThreeSum {
         return result;
     }
 }
-
